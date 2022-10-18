@@ -9,7 +9,7 @@ const DashBoardSwr = () => {
   const { data, error } = useSWR("dashboard", fetcher);
   if (error) return "An Error";
   if (!data) return "Loading ....";
-
+  console.log(data);
   return (
     <>
       <h2>DashBoard</h2>
