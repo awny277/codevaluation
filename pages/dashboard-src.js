@@ -5,7 +5,7 @@ const fetcher = async () => {
   const data = response.json();
   return data;
 };
-const DashBoardSrc = () => {
+const DashBoardSwr = () => {
   const { data, error } = useSWR("dashboard", fetcher);
   if (error) return "An Error";
   if (!data) return "Loading ....";
@@ -19,4 +19,4 @@ const DashBoardSrc = () => {
   );
 };
 
-export default DashBoardSrc;
+export default DashBoardSwr;
