@@ -13,6 +13,8 @@ const DashBoardSrc = () => {
   return (
     <>
       <h2>DashBoard</h2>
+      <h2>{data.id}</h2>
+      <h2>{data.title}</h2>
     </>
   );
 };
