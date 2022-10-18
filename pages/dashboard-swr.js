@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import useSWR from "swr";
 const fetcher = async () => {
@@ -10,11 +11,18 @@ const DashBoardSwr = () => {
   if (error) return "An Error";
   if (!data) return "Loading ....";
   console.log(data);
+  const DisplayData = data.map((ele, idx) => {
+    return (
+      <div key={idx}>
+        <h2>{ele.title}</h2>
+      </div>
+    );
+  });
   return (
     <>
       <h2>DashBoard</h2>
-      <h2>{data.id}</h2>
-      <h2>{data.title}</h2>
+      <Link href={"/"}> Back to Home</Link>
+      {DisplayData}
     </>
   );
 };

@@ -14,6 +14,7 @@ export default function Home() {
 
       <h1>Hello from Home</h1>
       <Link href={"/posts"}>Go to Posts</Link>
+      <Link href={"/dashboard-swr"}> go to DAshBoardSwr</Link>
     </div>
   );
 }
